@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Module 12 CSRF training page</title>
+<h1>Module 12 local CSRF training page</h1>
+<p>This file is for the local lab only. It submits a state-changing form to 127.0.0.1:8120.</p>
+<form action="http://127.0.0.1:8120/transfer" method="POST">
+  <input type="hidden" name="amount" value="10">
+  <button type="submit">Submit local transfer</button>
+</form>
+<hr>
+<button id="cors">Read local CORS endpoint</button>
+<pre id="out"></pre>
+<script>
+document.querySelector('#cors').onclick = async () => {
+  const r = await fetch('http://127.0.0.1:8120/cors-data', {credentials:'include'});
+  document.querySelector('#out').textContent = await r.text();
+};
+</script>
