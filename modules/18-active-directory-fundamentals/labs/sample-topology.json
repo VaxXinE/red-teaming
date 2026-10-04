@@ -1,0 +1,18 @@
+{
+  "forests": [
+    {
+      "name": "lab.example",
+      "domains": [
+        {
+          "name": "lab.example",
+          "dcs": ["dc01.lab.example"],
+          "dns_servers": ["192.168.56.10"],
+          "ous": ["Users", "Workstations", "Servers"],
+          "groups": ["Domain Users", "Helpdesk", "Server Admins"],
+          "spns": ["HTTP/app01.lab.example", "CIFS/files01.lab.example"]
+        }
+      ],
+      "trusts": []
+    }
+  ]
+}
