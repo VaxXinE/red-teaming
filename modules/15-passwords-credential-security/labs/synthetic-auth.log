@@ -1,0 +1,9 @@
+2026-10-05T01:00:00Z auth success user=alice src=10.10.1.10 factor=password
+2026-10-05T01:00:10Z auth failure user=bob src=10.10.1.50 reason=bad_password
+2026-10-05T01:00:11Z auth failure user=carol src=10.10.1.50 reason=bad_password
+2026-10-05T01:00:12Z auth failure user=dave src=10.10.1.50 reason=bad_password
+2026-10-05T01:00:13Z auth failure user=erin src=10.10.1.50 reason=bad_password
+2026-10-05T01:00:20Z auth failure user=alice src=10.10.1.77 reason=bad_password
+2026-10-05T01:00:21Z auth failure user=alice src=10.10.1.77 reason=bad_password
+2026-10-05T01:00:22Z auth failure user=alice src=10.10.1.77 reason=bad_password
+2026-10-05T01:00:30Z auth success user=bob src=10.10.1.20 factor=mfa
