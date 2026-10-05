@@ -1,0 +1,7 @@
+{
+  "steps": [
+    {"name":"process marker","expected_telemetry":"process creation with RTLAB24_MARKER","observed":true,"analytic_expected":true,"alert_observed":true},
+    {"name":"marker file","expected_telemetry":"file create event","observed":true,"analytic_expected":false,"alert_observed":false},
+    {"name":"localhost connection","expected_telemetry":"network connect event","observed":false,"analytic_expected":true,"alert_observed":false}
+  ]
+}

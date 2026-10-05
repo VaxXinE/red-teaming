@@ -1,0 +1,12 @@
+{
+  "engagement": "module24-training",
+  "objective": "Validate visibility for a benign discovery chain in an isolated lab",
+  "scope": ["localhost", "disposable-windows-vm"],
+  "allowed_actions": ["read-only discovery", "temporary marker file in lab workspace", "localhost HTTP request"],
+  "prohibited_actions": ["disable security controls", "clear or tamper with logs", "persistence", "credential dumping", "remote targets"],
+  "stop_conditions": ["unexpected service failure", "resource spike", "unexpected sensitive data", "out-of-scope traffic"],
+  "exposure_budget": {"hosts": 2, "duration_minutes": 15, "max_requests": 20, "max_privilege": "current-user"},
+  "expected_telemetry": ["process creation", "file create/delete", "localhost network connection", "DNS only if explicitly generated"],
+  "cleanup_owner": "student",
+  "evidence_plan": ["UTC timestamps", "JSONL events", "hash manifest", "cleanup proof"]
+}

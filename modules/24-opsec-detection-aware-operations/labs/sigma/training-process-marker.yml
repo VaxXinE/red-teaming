@@ -1,0 +1,23 @@
+title: Red Team Lab Marker In Process Command Line
+id: 7fd85369-fca3-4eb6-a86a-c75b7141c924
+status: experimental
+description: Detects the explicit RTLAB24_MARKER string used only by the authorized Module 24 training exercise.
+author: Red Team Learning Path
+date: 2026-10-05
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine|contains: 'RTLAB24_MARKER'
+    condition: selection
+fields:
+    - Image
+    - ParentImage
+    - User
+    - CommandLine
+falsepositives:
+    - Authorized Module 24 training activity
+level: low
+tags:
+    - attack.discovery
