@@ -1,0 +1,7 @@
+{
+  "principals": [
+    {"name":"WEB01$","type":"computer","mode":"constrained","targets":["cifs/FILE01.lab.local"]},
+    {"name":"APP01$","type":"computer","mode":"rbcd-source","targets":["SQL01$"]},
+    {"name":"LEGACY01$","type":"computer","mode":"unconstrained","targets":["any-service"]}
+  ]
+}

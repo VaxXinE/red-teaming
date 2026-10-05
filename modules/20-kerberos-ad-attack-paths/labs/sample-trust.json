@@ -1,0 +1,6 @@
+{
+  "trusts": [
+    {"source":"LAB.LOCAL","target":"DEV.LAB.LOCAL","direction":"bidirectional","transitive":true,"type":"parent-child","selectiveAuth":false},
+    {"source":"LAB.LOCAL","target":"PARTNER.LOCAL","direction":"outbound","transitive":false,"type":"external","selectiveAuth":true}
+  ]
+}

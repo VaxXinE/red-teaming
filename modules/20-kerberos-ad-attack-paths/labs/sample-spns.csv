@@ -1,0 +1,5 @@
+SamAccountName,SPNs,PasswordAgeDays,EncryptionTypes,Privileged,Notes
+svc_sql,"MSSQLSvc/sql01.lab.local:1433",740,"RC4,AES128,AES256",false,"legacy service account"
+svc_web,"HTTP/app01.lab.local",35,"AES128,AES256",false,"managed rotation"
+svc_backup,"cifs/backup01.lab.local",910,"RC4",true,"backup operator group"
+web01$,"HOST/web01.lab.local;RestrictedKrbHost/web01.lab.local",18,"AES128,AES256",false,"computer account"

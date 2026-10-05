@@ -1,0 +1,9 @@
+{
+  "nodes": ["STUDENT","HELPDESK","SVC_APP","APP01$","DOMAIN ADMINS"],
+  "edges": [
+    {"from":"STUDENT","to":"HELPDESK","type":"MemberOf"},
+    {"from":"HELPDESK","to":"SVC_APP","type":"GenericWrite"},
+    {"from":"SVC_APP","to":"APP01$","type":"ControlsService"},
+    {"from":"APP01$","to":"DOMAIN ADMINS","type":"AdminTo"}
+  ]
+}
