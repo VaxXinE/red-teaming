@@ -1,0 +1,12 @@
+Port 22
+ListenAddress 0.0.0.0
+PasswordAuthentication yes
+PermitRootLogin no
+PubkeyAuthentication yes
+AllowTcpForwarding yes
+GatewayPorts no
+X11Forwarding no
+PermitTunnel no
+UsePAM no
+PrintMotd no
+Subsystem sftp internal-sftp

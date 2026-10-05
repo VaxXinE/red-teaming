@@ -1,0 +1,10 @@
+{
+  "external_network": "172.31.210.0/24",
+  "internal_network": "172.31.211.0/24",
+  "nodes": [
+    {"name": "attacker", "interfaces": ["172.31.210.10"], "role": "operator"},
+    {"name": "jump", "interfaces": ["172.31.210.20", "172.31.211.20"], "role": "pivot"},
+    {"name": "internal-web", "interfaces": ["172.31.211.30"], "role": "internal service"},
+    {"name": "internal-ssh", "interfaces": ["172.31.211.40"], "role": "lateral target"}
+  ]
+}
