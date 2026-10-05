@@ -1,0 +1,11 @@
+{
+  "profile_id": "SIM-RED-22",
+  "title": "Synthetic discovery-focused adversary profile",
+  "scope_note": "Training-only synthetic intelligence. Not attributed to a real actor.",
+  "behaviors": [
+    {"sequence":1,"observation":"Operator queried the current logged-on identity before choosing follow-on actions.","candidate_technique_id":"T1033","confidence":"high","source":"Synthetic incident note A"},
+    {"sequence":2,"observation":"Operator collected OS version, architecture, hostname, and patch/build context.","candidate_technique_id":"T1082","confidence":"high","source":"Synthetic incident note A"},
+    {"sequence":3,"observation":"Operator enumerated running processes to identify security and business software.","candidate_technique_id":"T1057","confidence":"high","source":"Synthetic incident note B"},
+    {"sequence":4,"observation":"Operator listed local accounts to understand available identities on the host.","candidate_technique_id":"T1087.001","confidence":"medium","source":"Synthetic incident note B"}
+  ]
+}

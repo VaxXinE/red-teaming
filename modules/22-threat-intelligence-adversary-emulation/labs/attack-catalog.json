@@ -1,0 +1,6 @@
+{
+  "T1033": {"name":"System Owner/User Discovery","tactic":"Discovery","platforms":["Linux","Windows","macOS"],"safe_lab":"whoami"},
+  "T1082": {"name":"System Information Discovery","tactic":"Discovery","platforms":["Linux","Windows","macOS"],"safe_lab":"uname -a / systeminfo"},
+  "T1057": {"name":"Process Discovery","tactic":"Discovery","platforms":["Linux","Windows","macOS"],"safe_lab":"ps / Get-Process"},
+  "T1087.001": {"name":"Account Discovery: Local Account","tactic":"Discovery","platforms":["Linux","Windows","macOS"],"safe_lab":"getent passwd / Get-LocalUser"}
+}
