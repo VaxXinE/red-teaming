@@ -1,0 +1,2 @@
+Module 23 harmless training artifact
+Purpose: observe transfer + hash correlation.
