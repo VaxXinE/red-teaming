@@ -1,0 +1,35 @@
+{
+  "engagement": "Module 26 Final Red Team Capstone",
+  "authorized_environment": "local-docker-training-only",
+  "targets": [
+    {"name": "capstone-attacker", "ip": "10.26.10.10", "zone": "dmz", "role": "attacker"},
+    {"name": "edge-web", "ip": "10.26.10.20", "zone": "dmz", "role": "web"},
+    {"name": "jump-host", "ip": "10.26.10.30", "internal_ip": "10.26.20.30", "zone": "dmz+internal", "role": "pivot"},
+    {"name": "internal-api", "ip": "10.26.20.40", "zone": "internal", "role": "api"},
+    {"name": "internal-ssh", "ip": "10.26.20.50", "zone": "internal", "role": "objective"}
+  ],
+  "networks": ["10.26.10.0/24", "10.26.20.0/24"],
+  "allowed": [
+    "host discovery and service enumeration inside listed Docker networks",
+    "controlled HTTP vulnerability validation on edge-web",
+    "SSH with dummy credentials obtained from the lab",
+    "fixed SUID helper execution on jump-host",
+    "SSH local forwarding, SOCKS, or ProxyJump inside the lab",
+    "read-only access to dummy objective"
+  ],
+  "prohibited": [
+    "public or LAN scanning",
+    "denial of service or high-rate fuzzing",
+    "persistence",
+    "credential guessing outside provided training credentials",
+    "kernel exploitation",
+    "mounting or reading host secrets",
+    "binding vulnerable services to public or LAN interfaces"
+  ],
+  "stop_conditions": [
+    "unexpected access to non-training data",
+    "unexpected routing to non-lab networks",
+    "lab instability affecting host resources",
+    "scope ambiguity"
+  ]
+}

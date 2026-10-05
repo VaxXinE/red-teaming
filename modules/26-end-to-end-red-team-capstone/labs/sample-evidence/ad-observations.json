@@ -1,0 +1,10 @@
+{
+  "source": "synthetic directory export",
+  "domain": "northstar.test",
+  "observations": [
+    {"id":"AD-01","detail":"svc_app is associated with app01 service inventory."},
+    {"id":"AD-02","detail":"svc_app is a member of App Operators."},
+    {"id":"AD-03","detail":"App Operators has read access to Tier1 Admins metadata but no effective write permission in the provided ACL summary."},
+    {"id":"AD-04","detail":"No evidence proves a path from svc_app to domain-level administration."}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Northstar Labs",
+  "authorization": "synthetic/offline training scenario",
+  "time_window": "training-only",
+  "assets": [
+    {"name":"edge-web01","hostname":"web01.northstar.test","ip":"10.26.10.20","role":"training web app"},
+    {"name":"app01","hostname":"app01.northstar.test","ip":"10.26.20.20","role":"internal app server"},
+    {"name":"dc01","hostname":"dc01.northstar.test","ip":"10.26.20.10","role":"training domain controller"},
+    {"name":"ws01","hostname":"ws01.northstar.test","ip":"10.26.30.10","role":"training workstation"}
+  ],
+  "objectives": [
+    {"id":"OBJ-01","objective":"Map externally reachable training surface"},
+    {"id":"OBJ-02","objective":"Validate one initial-access weakness"},
+    {"id":"OBJ-03","objective":"Reason about a privilege path"},
+    {"id":"OBJ-04","objective":"Evaluate defensive visibility"},
+    {"id":"OBJ-05","objective":"Deliver professional report"}
+  ],
+  "stop_conditions": ["unexpected public target","availability degradation","real sensitive data","scope ambiguity"]
+}

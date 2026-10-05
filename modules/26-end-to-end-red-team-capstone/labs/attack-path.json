@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id":"internet","label":"Internet / external position"},
+    {"id":"edge-web01","label":"edge-web01"},
+    {"id":"app01","label":"app01"},
+    {"id":"svc-app","label":"svc_app"},
+    {"id":"tier1-admins","label":"Tier1 Admins"},
+    {"id":"dc01","label":"dc01"}
+  ],
+  "edges": [
+    {"from":"internet","to":"edge-web01","state":"validated","note":"service exposure present in synthetic inventory"},
+    {"from":"edge-web01","to":"app01","state":"hypothetical","note":"application trust inferred; no live validation"},
+    {"from":"app01","to":"svc-app","state":"validated","note":"service identity mapped from synthetic evidence"},
+    {"from":"svc-app","to":"tier1-admins","state":"blocked","note":"effective write path absent in evidence"},
+    {"from":"tier1-admins","to":"dc01","state":"not-tested","note":"outside capstone validation scope"}
+  ]
+}

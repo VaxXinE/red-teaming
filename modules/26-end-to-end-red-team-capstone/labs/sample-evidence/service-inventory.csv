@@ -1,0 +1,6 @@
+asset,port,service,identity,source
+web01.northstar.test,443,https,web_svc,synthetic inventory
+app01.northstar.test,8443,internal-app,svc_app,synthetic inventory
+dc01.northstar.test,88,kerberos,domain service,synthetic inventory
+dc01.northstar.test,389,ldap,domain service,synthetic inventory
+ws01.northstar.test,5985,winrm,local system,synthetic inventory

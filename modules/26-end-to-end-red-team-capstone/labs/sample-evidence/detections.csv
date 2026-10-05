@@ -1,0 +1,5 @@
+timestamp_utc,asset,step,telemetry,analytic,outcome
+2026-10-05T02:10:00Z,web01.northstar.test,web authorization check,reverse-proxy access log,none,logged-only
+2026-10-05T02:22:00Z,ws01.northstar.test,lab process execution,EDR process telemetry,training-rule-101,detected
+2026-10-05T02:35:00Z,dc01.northstar.test,read-only directory query,LDAP audit telemetry,none,logged-only
+2026-10-05T02:42:00Z,app01.northstar.test,privilege change attempt,OS security/control event,policy-control-7,blocked

@@ -1,0 +1,9 @@
+{
+  "source": "synthetic training capture",
+  "asset": "web01.northstar.test",
+  "observations": [
+    {"id":"WEB-01","type":"exposure","detail":"HTTPS service exposed on 443 with training API route /api/orders/{id}."},
+    {"id":"WEB-02","type":"authorization-signal","detail":"Two synthetic responses show object ownership metadata is evaluated inconsistently for order 102."},
+    {"id":"WEB-03","type":"safety","detail":"No bulk enumeration or destructive request is represented in this dataset."}
+  ]
+}

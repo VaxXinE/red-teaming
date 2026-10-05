@@ -1,0 +1,67 @@
+services:
+  attacker:
+    build: ./attacker
+    container_name: capstone26-attacker
+    command: ["sleep","infinity"]
+    networks:
+      dmz:
+        ipv4_address: 10.26.10.10
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+
+  edge-web:
+    build: ./edge-web
+    container_name: capstone26-edge-web
+    environment:
+      LAB_BIND: 0.0.0.0
+    networks:
+      dmz:
+        ipv4_address: 10.26.10.20
+    read_only: true
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m"]
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+
+  jump-host:
+    build: ./jump-host
+    container_name: capstone26-jump-host
+    networks:
+      dmz:
+        ipv4_address: 10.26.10.30
+      internal:
+        ipv4_address: 10.26.20.30
+
+  internal-api:
+    build: ./internal-api
+    container_name: capstone26-internal-api
+    environment:
+      LAB_BIND: 0.0.0.0
+    networks:
+      internal:
+        ipv4_address: 10.26.20.40
+    read_only: true
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m"]
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+
+  internal-ssh:
+    build: ./internal-ssh
+    container_name: capstone26-internal-ssh
+    networks:
+      internal:
+        ipv4_address: 10.26.20.50
+
+networks:
+  dmz:
+    name: capstone26_dmz
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.26.10.0/24
+  internal:
+    name: capstone26_internal
+    driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: 10.26.20.0/24
